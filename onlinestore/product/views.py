@@ -21,3 +21,11 @@ def student_list(request):
     students = Student.objects.all()
     data = {"students": list(students.values())}
     return render(request, "students.html", {'data': data})
+
+
+def about(request):
+    data = {"student": {
+        "name": "Sarthak",
+        "registrationNo": "180905470",
+        "cgpa": 7.54}}
+    return render(request, "student.html", {'data': data})
