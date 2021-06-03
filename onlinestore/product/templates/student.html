@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Regi</th>
+      <th scope="col">cgpa</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>{{data.student.name}}
+</td>
+      <td>{{data.student.registrationNo}}
+</td>
+      <td>{{data.student.cgpa}}
+</td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Regi</th>
+            <th scope="col">cgpa</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%for student in data.students %}
+
+        <tr>
+            <td>{{student.name}}
+            </td>
+            <td>{{student.registrationNo}}
+            </td>
+            <td>{{student.cgpa}}
+            </td>
+        </tr>
+
+        {% endfor%}
+
+    </tbody>
+</table>
+
+{% endblock %}
