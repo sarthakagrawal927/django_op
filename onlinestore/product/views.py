@@ -1,4 +1,3 @@
-from django.http import JsonResponse
 from django.shortcuts import render
 
 from .models import Student
@@ -16,11 +15,9 @@ def student_detail(request, registrationNo):
         data = "not found"
 
     return render(request, "student.html", {'data': data})
-    # return response
 
 
 def student_list(request):
     students = Student.objects.all()
     data = {"students": list(students.values())}
-    response = JsonResponse(data)
     return render(request, "students.html", {'data': data})
